@@ -27,8 +27,11 @@ case 161...180:
     print("You are in the Hard zone. Activity in this zone increases maximum performance capacity for shorter sessions.")
 case 181...200:
     print("You are in teh Maximum zone. Activity in this zone helps fit athletes develop speed.")
+case 200...:
+    print("Pushing it to hard. You need to slow down.")
 default:
-     print("Pushing it to hard. You need to slow down.")
+    print("Pushing it to hard. You need to slow down.")
+
 }
 /*:
 [Previous](@previous)  |  page 7 of 9  |  [Next: Exercise - Ternary Operator](@next)
