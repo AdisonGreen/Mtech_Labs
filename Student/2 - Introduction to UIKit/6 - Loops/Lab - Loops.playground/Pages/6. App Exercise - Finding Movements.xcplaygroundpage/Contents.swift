@@ -11,7 +11,12 @@
 let lowHR = 110
 let highHR = 125
 var movementHeartRates: [String: Int] = ["Walking": 85, "Running": 120, "Swimming": 130, "Cycling": 128, "Skiing": 114, "Climbing": 129]
-
+for whatCouldIDo in movementHeartRates {
+    if whatCouldIDo.value < highHR && whatCouldIDo.value > lowHR {
+        continue
+    }
+    print("You could go \(whatCouldIDo.key)")
+}
 
 /*:
  _Copyright © 2021 Apple Inc._
