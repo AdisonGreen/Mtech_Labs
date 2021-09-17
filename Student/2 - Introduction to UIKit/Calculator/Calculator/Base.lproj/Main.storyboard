@@ -50,6 +50,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="AC"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="baR-us-wdl"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CF0-t8-5K3">
                                                                 <rect key="frame" x="97.666666666666686" y="0.0" width="97" height="100.33333333333333"/>
@@ -57,6 +60,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="+/-"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B0e-hd-2sE"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRJ-CF-Hrg">
                                                                 <rect key="frame" x="195.66666666666666" y="0.0" width="96.666666666666657" height="100.33333333333333"/>
@@ -64,6 +70,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="%"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="14E-7G-qLE"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcB-Bg-WnT">
                                                                 <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="100.33333333333333"/>
@@ -71,6 +80,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="/"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v1l-px-d8f"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -83,6 +95,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="7"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H3W-Vm-fJi"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi0-Se-33t">
                                                                 <rect key="frame" x="97.666666666666686" y="0.0" width="97" height="100.33333333333333"/>
@@ -90,6 +105,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="8"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U95-aO-je6"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDM-s2-anH">
                                                                 <rect key="frame" x="195.66666666666666" y="0.0" width="96.666666666666657" height="100.33333333333333"/>
@@ -97,6 +115,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="9"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lcD-qe-ucs"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVu-Ri-k0f">
                                                                 <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="100.33333333333333"/>
@@ -104,6 +125,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="x"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YLE-i5-DPY"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -116,6 +140,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="4"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dd5-U0-qsr"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxS-ml-gDh">
                                                                 <rect key="frame" x="97.666666666666686" y="0.0" width="97" height="100.33333333333333"/>
@@ -123,6 +150,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="5"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oms-Bp-fs5"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFT-u5-q3U">
                                                                 <rect key="frame" x="195.66666666666666" y="0.0" width="96.666666666666657" height="100.33333333333333"/>
@@ -130,6 +160,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="6"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJw-t0-F2M"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3c-yo-Yg5">
                                                                 <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="100.33333333333333"/>
@@ -137,6 +170,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="-"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4dp-JH-dCZ"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -149,6 +185,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="1"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g90-gE-9ct"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ai4-5n-zDV">
                                                                 <rect key="frame" x="97.666666666666686" y="0.0" width="97" height="100.33333333333333"/>
@@ -156,6 +195,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="2"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqg-8X-oig"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gch-u7-Psw">
                                                                 <rect key="frame" x="195.66666666666666" y="0.0" width="96.666666666666657" height="100.33333333333333"/>
@@ -163,6 +205,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="3"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SeJ-tP-2xT"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dO-H7-EKf">
                                                                 <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="100.33333333333333"/>
@@ -170,6 +215,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="+"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kV8-Og-aBT"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -182,6 +230,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="0"/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqX-Vi-ZVv"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs8-Df-sLm">
                                                                 <rect key="frame" x="194" y="0.0" width="96.666666666666686" height="100.33333333333333"/>
@@ -189,6 +240,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="."/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wk7-Cj-RwJ"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqN-Zu-elH">
                                                                 <rect key="frame" x="291.66666666666669" y="0.0" width="98.333333333333314" height="100.33333333333333"/>
@@ -196,6 +250,9 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="="/>
+                                                                <connections>
+                                                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FvL-jS-Pzp"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -227,6 +284,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="l2i-iz-TPU" secondAttribute="bottom" id="bwi-Z8-nLR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="display" destination="fJs-Hp-hOB" id="GXC-Eq-6d5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
