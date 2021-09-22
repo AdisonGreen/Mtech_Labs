@@ -15,7 +15,7 @@ struct Workout {
     let endTime: Double
     
     init?(startTime: Double, endTime: Double) {
-        guard endTime == startTime else {
+        guard (endTime - startTime) > 10 else {
             return nil
         }
         self.startTime = startTime
@@ -23,7 +23,7 @@ struct Workout {
     }
 }
 
-
+Workout(startTime: 28800, endTime: 28811)
 /*:
  Imagine a screen where a user inputs a meal that they've eaten. If the user taps a "save" button without adding any food, you might want to prompt the user that they haven't actually added anything.
 

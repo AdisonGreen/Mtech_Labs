@@ -41,7 +41,7 @@ func createUser() -> User? {
           let ageTextField = ageTextField.text else {
         return nil
     }
-    return User.init(firstName: firstNameTextField, lastName: lastNameTextField, age: ageTextField)
+    return User(firstName: firstNameTextField, lastName: lastNameTextField, age: ageTextField)
 }
 
 let firstNameTextField = UITextField()
