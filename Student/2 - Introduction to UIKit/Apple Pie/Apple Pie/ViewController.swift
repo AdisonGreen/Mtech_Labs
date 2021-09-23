@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var listOfWords = ["pokemon", "small", "book",
-    "button", "incandescent", "something"]
+    var listOfWords = ["pokemon", "book", "incandescent",
+    "button", "small", "something"]
     let incorrectMovesAllowed = 7
     var totalWins = 0 {
         didSet {
