@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 
     func updateView() {
         Label1.text = "The App has launched \(appDelegate.launchCount) time(s)"
-        Label2.text = "The scene is active \(appDelegate.configurationForConnectingCount) time(s)"
+        Label2.text = "The App has configured  \(appDelegate.configurationForConnectingCount) time(s)"
         Label3.text = "The App has connected \(willConnectCount1) time(s)"
         Label4.text = "The App has become active \(willConnectCount2) time(s)"
         Label5.text = "The App is going to resign active \(willConnectCount3) time(s)"
