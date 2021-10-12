@@ -20,34 +20,22 @@
                                 <rect key="frame" x="15" y="194" width="384" height="518"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGE-BB-8NP">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="2ze-ME-wd6"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="WrS-JK-pnJ">
-                                        <rect key="frame" x="0.0" y="100" width="384" height="182"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="170" id="3UY-Bm-AY8"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="42" width="384" height="221"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are You?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyD-ld-lno">
-                                        <rect key="frame" x="0.0" y="282" width="384" height="136"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="136" id="qf6-wn-JuK"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="263" width="384" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCG-6q-r8J">
-                                        <rect key="frame" x="0.0" y="418" width="384" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="aMr-U8-jT2"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="305" width="384" height="213"/>
                                         <state key="normal" title="Begin Personality Quiz"/>
                                         <connections>
                                             <segue destination="vTK-t4-UmL" kind="show" id="l64-fh-5JZ"/>
@@ -219,6 +207,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ra-eF-Wxo">
                                         <rect key="frame" x="0.0" y="90" width="374" height="30"/>
                                         <state key="normal" title="Submit Answer"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="ehz-1I-MHW" eventType="touchUpInside" id="FVA-l3-rP2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -292,13 +283,14 @@
                         <outlet property="questionProgressView" destination="KuP-Tw-R8m" id="qUg-Uh-M6d"/>
                         <outlet property="rangedLabel1" destination="MWe-W1-DcT" id="83N-6L-NVz"/>
                         <outlet property="rangedLabel2" destination="9fb-CO-NFd" id="Dh4-Ea-lDb"/>
+                        <outlet property="rangedSlider" destination="Zul-GR-mM3" id="pSX-lB-PZ5"/>
                         <outlet property="rangedStackView" destination="g9V-KK-oZ0" id="YD8-v0-L3s"/>
                         <outlet property="singleButton1" destination="1Vr-8p-kvH" id="bJN-5D-Ofe"/>
                         <outlet property="singleButton2" destination="3MJ-9Y-n4O" id="P57-FA-TU3"/>
                         <outlet property="singleButton3" destination="rpW-zp-67T" id="JOD-WL-8sr"/>
                         <outlet property="singleButton4" destination="YY0-g7-K2C" id="95x-ar-HHy"/>
                         <outlet property="singleStackView" destination="HIA-cI-H8l" id="Psv-JP-zdQ"/>
-                        <segue destination="Udj-sX-iHz" kind="show" id="6e8-rH-GM8"/>
+                        <segue destination="Udj-sX-iHz" kind="show" identifier="" destinationCreationSelector="showResults:" id="6e8-rH-GM8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Dg-eA-2OG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -342,6 +334,10 @@
                     <navigationItem key="navigationItem" title="Results" id="vcC-nt-HjD">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="fLD-O7-XLb"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultAnswerLabel" destination="WQ8-Xp-jtg" id="jwG-qL-3cB"/>
+                        <outlet property="resultDefinitionLabel" destination="VyQ-Tt-ezY" id="bju-z2-ebb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ln7-0D-LOj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

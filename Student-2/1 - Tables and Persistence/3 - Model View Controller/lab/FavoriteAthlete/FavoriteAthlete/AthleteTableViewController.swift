@@ -22,8 +22,7 @@ class AthleteTableViewController: UITableViewController {
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         guard
-            let athleteFormViewController =
-               segue.source as? AthleteViewController,
+            let athleteFormViewController = segue.source as? AthleteViewController,
             let athlete = athleteFormViewController.athlete
         else {
             return

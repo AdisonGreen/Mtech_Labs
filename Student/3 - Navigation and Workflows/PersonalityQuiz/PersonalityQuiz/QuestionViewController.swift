@@ -31,6 +31,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var rangedStackView: UIStackView!
     @IBOutlet weak var rangedLabel1: UILabel!
     @IBOutlet weak var rangedLabel2: UILabel!
+    @IBOutlet weak var rangedSlider: UISlider!
     
     @IBOutlet weak var questionProgressView: UIProgressView!
     
@@ -108,6 +109,16 @@ class QuestionViewController: UIViewController {
         nextQuestion()
     }
     
+    @IBAction func rangedAnswerButtonPressed() {
+        let currentAnswers = questions[questionIndex].answers
+            let index = Int(round(rangedSlider.value *
+              Float(currentAnswers.count - 1)))
+        
+            answersChosen.append(currentAnswers[index])
+        
+            nextQuestion()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -147,20 +158,37 @@ class QuestionViewController: UIViewController {
 
     func updateMultipleStack(using answers: [Answer]) {
         multipleStackView.isHidden = false
-        multiLabel1.text = answers[0].text
-        multiLabel1.text = answers[1].text
-        multiLabel1.text = answers[2].text
-        multiLabel1.text = answers[3].text
+            multiSwitch1.isOn = false
+            multiSwitch2.isOn = false
+            multiSwitch3.isOn = false
+            multiSwitch4.isOn = false
+            multiLabel1.text = answers[0].text
+            multiLabel2.text = answers[1].text
+            multiLabel3.text = answers[2].text
+            multiLabel4.text = answers[3].text
     }
     
     func updateRangedStack(using answers: [Answer]) {
         rangedStackView.isHidden = false
-        rangedLabel1.text = answers.first?.text
-        rangedLabel2.text = answers.last?.text
+            rangedSlider.setValue(0.5, animated: false)
+            rangedLabel1.text = answers.first?.text
+            rangedLabel2.text = answers.last?.text
+    }
+    
+    @IBSegueAction func showResults(_ coder: NSCoder) ->
+       ResultsViewController? {
+        return ResultsViewController(coder: coder, responses: answersChosen)
     }
     
     func nextQuestion() {
-        
+        questionIndex += 1
+            if questionIndex < questions.count {
+                updateUI()
+            } else {
+                performSegue(withIdentifier: "Results", sender: nil)
+            }
     }
+    
+    
     
 }
