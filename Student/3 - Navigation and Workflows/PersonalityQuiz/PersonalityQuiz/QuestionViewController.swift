@@ -45,16 +45,16 @@ class QuestionViewController: UIViewController {
                 Answer(text: "Steak", type: .Rockruff),
                 Answer(text: "Fish", type: .Shinx),
                 Answer(text: "Carrots", type: .Scorbunny),
-                Answer(text: "Corn", type: .Turtwig)
+                Answer(text: "Salad", type: .Turtwig)
             ]
         ),
         Question(
             text: "Which activities do you enjoy most?",
             type: .multiple,
             answers: [
-                Answer(text: "Swimming", type: .Turtwig),
+                Answer(text: "Walking", type: .Turtwig),
                 Answer(text: "Sleeping", type: .Shinx),
-                Answer(text: "Cuddling", type: .Scorbunny),
+                Answer(text: "Running", type: .Scorbunny),
                 Answer(text: "Eating", type: .Rockruff)
             ]
         ),
@@ -66,6 +66,76 @@ class QuestionViewController: UIViewController {
                 Answer(text: "I get a little nervous", type: .Scorbunny),
                 Answer(text: "I barely notice them", type: .Turtwig),
                 Answer(text: "I love them", type: .Rockruff)
+            ]
+        ),
+        Question(
+            text: "Which do you do in your free time?",
+            type: .multiple,
+            answers: [
+                Answer(text: "Movies", type: .Turtwig),
+                Answer(text: "Nothing", type: .Shinx),
+                Answer(text: "Go walking or hiking", type: .Scorbunny),
+                Answer(text: "Hangout with people", type: .Rockruff)
+            ]
+        ),
+        Question(
+            text: "How much do you enjoy being around other people?",
+            type: .ranged,
+            answers: [
+                Answer(text: "Not at all", type: .Shinx),
+                Answer(text: "If it is people I know", type: .Turtwig),
+                Answer(text: "I like to be around people", type: .Scorbunny),
+                Answer(text: "Love it", type: .Rockruff)
+            ]
+        ),
+        Question(
+            text: "How often to you make new friends?",
+            type: .single,
+            answers: [
+                Answer(text: "Rarely", type: .Shinx),
+                Answer(text: "When I can", type: .Turtwig),
+                Answer(text: "A decent amount", type: .Scorbunny),
+                Answer(text: "All the time", type: .Rockruff)
+            ]
+        ),
+        Question(
+            text: "How do your days usually go?",
+            type: .single,
+            answers: [
+                Answer(text: "I plan how it all goes", type: .Rockruff),
+                Answer(text: "Just go with the flow", type: .Turtwig),
+                Answer(text: "Plan it out better never goes how it is planned", type: .Scorbunny),
+                Answer(text: "My days just always fall apart", type: .Shinx)
+            ]
+        ),
+        Question(
+            text: "How much do you like doing artistic things?",
+            type: .ranged,
+            answers: [
+                Answer(text: "I don't like art", type: .Shinx),
+                Answer(text: "I kind of enjoy looking at art", type: .Turtwig),
+                Answer(text: "I think art is pretty cool", type: .Rockruff),
+                Answer(text: "Art is the best", type: .Scorbunny)
+            ]
+        ),
+        Question(
+            text: "Which is you?",
+            type: .multiple,
+            answers: [
+                Answer(text: "I am a patient person", type: .Turtwig),
+                Answer(text: "I get scared easily", type: .Shinx),
+                Answer(text: "I get bored really easy", type: .Scorbunny),
+                Answer(text: "I love to be around people", type: .Rockruff)
+            ]
+        ),
+        Question(
+            text: "What is more like you?",
+            type: .single,
+            answers: [
+                Answer(text: "I will relax and try to forget about work", type: .Turtwig),
+                Answer(text: "I will get things done as fast as possible", type: .Shinx),
+                Answer(text: "I like to take my time to get things done", type: .Scorbunny),
+                Answer(text: "I can't relax until I finish everything", type: .Rockruff)
             ]
         )
    ]

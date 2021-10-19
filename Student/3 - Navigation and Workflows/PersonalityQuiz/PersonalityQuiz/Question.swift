@@ -37,4 +37,6 @@ enum AnimalType {
             return "You are a chill person who does not care what others are doing as long as they do not bug you. You would rather sit on the couch all day than go outside."
         }
     }
+    
+    
 }
