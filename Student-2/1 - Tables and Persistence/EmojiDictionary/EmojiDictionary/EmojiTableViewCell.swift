@@ -17,8 +17,6 @@ class EmojiTableViewCell: UITableViewCell {
         symbolLabel.text = emoji.symbol
         nameLabel.text = emoji.name
         descriptionLabel.text = emoji.description
-        
-        
     }
     
     override func awakeFromNib() {
