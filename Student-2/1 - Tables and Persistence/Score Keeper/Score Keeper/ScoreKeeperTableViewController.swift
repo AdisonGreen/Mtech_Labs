@@ -18,6 +18,7 @@ class ScoreKeeperTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         players = PlayerStats.loadFromFile()
+        players.sort { $0.score > $1.score }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +42,7 @@ class ScoreKeeperTableViewController: UITableViewController {
         let player = players[indexPath.row]
         
         cell.update(with: player)
+        cell.delegate = self
         
         return cell
     }
@@ -89,12 +91,10 @@ class ScoreKeeperTableViewController: UITableViewController {
 
 extension ScoreKeeperTableViewController: playerViewDelegate {
     func updateScore() {
-        players.sort { player1, player2 in
-            return player1.score < player2.score
-        }
+        players.sort { $0.score > $1.score }
         tableView.reloadData()
+        PlayerStats.saveToFile(players: players)
     }
-    
     
 }
 

@@ -7,13 +7,18 @@
 
 import Foundation
 
-struct PlayerStats: Codable {
+class PlayerStats: Codable {
     
     var name: String
     var score: Double
     
     static let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     static let archiveURL = documentsDirectory.appendingPathComponent("Score_Keeper").appendingPathExtension("plist")
+    
+    init(name: String, score: Double) {
+        self.name = name
+        self.score = score
+    }
     
     static func saveToFile(players: [PlayerStats]) {
         let propertyListEncoder = PropertyListEncoder()

@@ -26,6 +26,7 @@ class PlayerContentTableViewCell: UITableViewCell {
         plusMinusStepper.value = player.score
         let plusMinusStepperInInt = Int(plusMinusStepper.value)
         scoreLabel.text = plusMinusStepperInInt.description
+        somePlayer = player
     }
     
     @IBAction func stepperWasTapped(_ sender: UIStepper) {

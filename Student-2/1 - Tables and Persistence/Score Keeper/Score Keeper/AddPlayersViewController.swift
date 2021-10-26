@@ -12,11 +12,13 @@ class AddPlayersViewController: UIViewController {
     var player: PlayerStats?
     
     @IBOutlet weak var playerNameTextField: UITextField!
+    @IBOutlet weak var savePlayerButton: UIButton!
     @IBOutlet weak var startingScoreTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
     
     @IBAction func savePlayerButtonWasTapped(_ sender: Any) {
@@ -26,6 +28,10 @@ class AddPlayersViewController: UIViewController {
         
         player = PlayerStats(name: playerName, score: newVar)
         performSegue(withIdentifier: "unwindToPlayerScoreScreen", sender: self)
+    }
+    
+    func updateSaveButtonSate() {
+        
     }
     
     init?(coder: NSCoder, player: PlayerStats?) {

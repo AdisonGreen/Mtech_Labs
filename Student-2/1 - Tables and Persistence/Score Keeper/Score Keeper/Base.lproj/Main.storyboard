@@ -150,6 +150,7 @@
                     <navigationItem key="navigationItem" id="Fo7-1p-QZf"/>
                     <connections>
                         <outlet property="playerNameTextField" destination="Iqm-5G-P9n" id="Jc2-dP-OrM"/>
+                        <outlet property="savePlayerButton" destination="IYs-wB-O3l" id="Fhw-Us-wCx"/>
                         <outlet property="startingScoreTextField" destination="hRN-Fu-uC9" id="hNc-pA-t0I"/>
                     </connections>
                 </viewController>
@@ -228,14 +229,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KxU-xN-3Hw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717" y="108"/>
+            <point key="canvasLocation" x="777" y="-190"/>
         </scene>
         <!--Add New Game-->
         <scene sceneID="Nxl-jc-VRJ">
             <objects>
                 <viewController id="6EN-uF-F90" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xlk-Re-eBB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Xl5-wp-ALZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -244,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEi-tv-b4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1512" y="-190"/>
+            <point key="canvasLocation" x="1512" y="-220"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="99U-IE-SHT">
@@ -255,16 +256,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fNM-ws-2sO" kind="relationship" relationship="rootViewController" id="mcx-8g-u2R"/>
+                        <segue destination="Tzi-jz-PbY" kind="relationship" relationship="rootViewController" id="2jb-1W-gxp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4O-CT-oKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146" y="109"/>
+            <point key="canvasLocation" x="316" y="487"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="YWp-ma-XE2"/>
+        <segue reference="2jb-1W-gxp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="die.face.5.fill" catalog="system" width="128" height="114"/>
