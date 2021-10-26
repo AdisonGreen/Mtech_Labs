@@ -7,7 +7,15 @@
 
 import UIKit
 
+protocol playerViewDelegate {
+    func updateScore()
+}
+
 class PlayerContentTableViewCell: UITableViewCell {
+    
+    var delegate: playerViewDelegate?
+    
+    var somePlayer: PlayerStats?
     
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var plusMinusStepper: UIStepper!
@@ -15,24 +23,18 @@ class PlayerContentTableViewCell: UITableViewCell {
     
     func update(with player: PlayerStats) {
         playerNameLabel.text = player.name
-        let plusMinusStepperInInt = Int(plusMinusStepper.value)
-        scoreLabel.text = String(plusMinusStepperInInt)
         plusMinusStepper.value = player.score
+        let plusMinusStepperInInt = Int(plusMinusStepper.value)
+        scoreLabel.text = plusMinusStepperInInt.description
     }
     
     @IBAction func stepperWasTapped(_ sender: UIStepper) {
         scoreLabel.text = Int(sender.value).description
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        somePlayer?.score = sender.value
+        
+        delegate?.updateScore()
     }
     
 }
+
+

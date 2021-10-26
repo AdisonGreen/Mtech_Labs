@@ -17,6 +17,9 @@
 		B36FDADE271F0D9A00D7AAA2 /* PlayerContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FDADD271F0D9A00D7AAA2 /* PlayerContentTableViewCell.swift */; };
 		B3804E6B272053830076C054 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3804E6A272053830076C054 /* Players.swift */; };
 		B3804E6D27205D9D0076C054 /* AddPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3804E6C27205D9D0076C054 /* AddPlayersViewController.swift */; };
+		B3804E6F2727084A0076C054 /* GamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3804E6E2727084A0076C054 /* GamesTableViewController.swift */; };
+		B3804E712727087B0076C054 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3804E702727087B0076C054 /* Games.swift */; };
+		B3804E7327270ACD0076C054 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3804E7227270ACD0076C054 /* GameTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		B36FDADD271F0D9A00D7AAA2 /* PlayerContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerContentTableViewCell.swift; sourceTree = "<group>"; };
 		B3804E6A272053830076C054 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		B3804E6C27205D9D0076C054 /* AddPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayersViewController.swift; sourceTree = "<group>"; };
+		B3804E6E2727084A0076C054 /* GamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewController.swift; sourceTree = "<group>"; };
+		B3804E702727087B0076C054 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		B3804E7227270ACD0076C054 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 				B3804E6A272053830076C054 /* Players.swift */,
 				B36FDADD271F0D9A00D7AAA2 /* PlayerContentTableViewCell.swift */,
 				B36FDACD271F021100D7AAA2 /* Main.storyboard */,
+				B3804E6E2727084A0076C054 /* GamesTableViewController.swift */,
+				B3804E7227270ACD0076C054 /* GameTableViewCell.swift */,
+				B3804E702727087B0076C054 /* Games.swift */,
 				B3804E6C27205D9D0076C054 /* AddPlayersViewController.swift */,
 				B36FDAD0271F021500D7AAA2 /* Assets.xcassets */,
 				B36FDAD2271F021500D7AAA2 /* LaunchScreen.storyboard */,
@@ -152,8 +161,11 @@
 				B3804E6B272053830076C054 /* Players.swift in Sources */,
 				B36FDACC271F021100D7AAA2 /* ViewController.swift in Sources */,
 				B3804E6D27205D9D0076C054 /* AddPlayersViewController.swift in Sources */,
+				B3804E712727087B0076C054 /* Games.swift in Sources */,
 				B36FDAC8271F021100D7AAA2 /* AppDelegate.swift in Sources */,
+				B3804E7327270ACD0076C054 /* GameTableViewCell.swift in Sources */,
 				B36FDADC271F056500D7AAA2 /* ScoreKeeperTableViewController.swift in Sources */,
+				B3804E6F2727084A0076C054 /* GamesTableViewController.swift in Sources */,
 				B36FDADE271F0D9A00D7AAA2 /* PlayerContentTableViewCell.swift in Sources */,
 				B36FDACA271F021100D7AAA2 /* SceneDelegate.swift in Sources */,
 			);
