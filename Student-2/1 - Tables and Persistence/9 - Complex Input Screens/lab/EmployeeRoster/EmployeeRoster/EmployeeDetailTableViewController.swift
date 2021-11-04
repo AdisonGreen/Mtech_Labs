@@ -113,10 +113,6 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
         dobLabel.text = dateFormatter.string(from: dobDatePicker.date)
     }
     
-    @IBAction func datePickerChanged(_ sender: Any) {
-//        dobLabel.text = dobDatePicker.date
-    }
-    
     @IBSegueAction func showEmployeeTypes(_ coder: NSCoder) -> EmployeeTypeTableViewController? {
         let typeController =  EmployeeTypeTableViewController(coder: coder)
         typeController?.delegate = self

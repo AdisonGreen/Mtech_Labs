@@ -9,16 +9,25 @@ import UIKit
 
 class ScoreKeeperTableViewController: UITableViewController {
     
-    var players: [PlayerStats] = [] {
+    var game: Game {
         didSet {
-            PlayerStats.saveToFile(players: players)
+            GameController.shared.save(game: game)
         }
+    }
+    
+    init?(coder: NSCoder, game: Game){
+        self.game = game
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        players = PlayerStats.loadFromFile()
-        players.sort { $0.score > $1.score }
+        
+        game.allThePlayers.sort { $0.score > $1.score }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,13 +42,13 @@ class ScoreKeeperTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return players.count
+        return game.allThePlayers.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerContent", for: indexPath) as! PlayerContentTableViewCell
-        let player = players[indexPath.row]
+        let player = game.allThePlayers[indexPath.row]
         
         cell.update(with: player)
         cell.delegate = self
@@ -53,7 +62,7 @@ class ScoreKeeperTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            players.remove(at: indexPath.row)
+            game.allThePlayers.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
@@ -63,11 +72,11 @@ class ScoreKeeperTableViewController: UITableViewController {
               let player = source.player else { return }
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            players.remove(at: indexPath.row)
-            players.insert(player, at: indexPath.row)
+            game.allThePlayers.remove(at: indexPath.row)
+            game.allThePlayers.insert(player, at: indexPath.row)
             tableView.deselectRow(at: indexPath, animated: true)
         } else {
-            players.append(player)
+            game.allThePlayers.append(player)
         }
         
     }
@@ -82,19 +91,23 @@ class ScoreKeeperTableViewController: UITableViewController {
             return nil
         }
         
-        let player = players[indexPath.row]
+        let player = game.allThePlayers[indexPath.row]
         
         return AddPlayersViewController(coder: coder, player: player)
     }
 
 }
 
-extension ScoreKeeperTableViewController: playerViewDelegate {
-    func updateScore() {
-        players.sort { $0.score > $1.score }
-        tableView.reloadData()
-        PlayerStats.saveToFile(players: players)
+extension ScoreKeeperTableViewController: PlayerViewDelegate {
+    func updateScore(cell: UITableViewCell, score: Double) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            game.allThePlayers[indexPath.row].score = score
+            game.allThePlayers.sort { $0.score > $1.score }
+            tableView.reloadData()
+            // Player.saveToFile(players: players)
+            
+        }
+        
     }
-    
 }
 

@@ -9,7 +9,7 @@ import UIKit
 
 class AddPlayersViewController: UIViewController {
 
-    var player: PlayerStats?
+    var player: Player?
     
     @IBOutlet weak var playerNameTextField: UITextField!
     @IBOutlet weak var savePlayerButton: UIButton!
@@ -26,7 +26,7 @@ class AddPlayersViewController: UIViewController {
               let startingScoreAsInt = startingScoreTextField.text,
               let newVar = Double(startingScoreAsInt) else { return }
         
-        player = PlayerStats(name: playerName, score: newVar)
+        player = Player(name: playerName, score: newVar)
         performSegue(withIdentifier: "unwindToPlayerScoreScreen", sender: self)
     }
     
@@ -34,7 +34,7 @@ class AddPlayersViewController: UIViewController {
         
     }
     
-    init?(coder: NSCoder, player: PlayerStats?) {
+    init?(coder: NSCoder, player: Player?) {
         self.player = player
         super.init(coder: coder)
     }

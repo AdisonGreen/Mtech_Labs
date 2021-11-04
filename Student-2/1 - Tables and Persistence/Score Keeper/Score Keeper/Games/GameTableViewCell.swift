@@ -13,6 +13,11 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var nameOfGame: UILabel!
     @IBOutlet weak var currentWinnerLabel: UILabel!
     
+    func updateGames(with game: Game) {
+        nameOfGame.text = game.gameName
+        currentWinnerLabel.text = game.allThePlayers.description
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

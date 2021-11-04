@@ -151,7 +151,6 @@
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="CO6-wC-BI3">
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <connections>
-                                                        <action selector="datePickerChanged:" destination="sKr-bE-vCi" eventType="valueChanged" id="3Wj-X1-LyH"/>
                                                         <action selector="datePickerWasChanged:" destination="sKr-bE-vCi" eventType="valueChanged" id="3dj-ra-gsJ"/>
                                                     </connections>
                                                 </datePicker>
