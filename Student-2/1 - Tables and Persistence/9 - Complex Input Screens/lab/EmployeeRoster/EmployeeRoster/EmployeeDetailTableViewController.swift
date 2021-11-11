@@ -89,11 +89,7 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        guard let name = nameTextField.text else {
-            return
-        }
-        
-        guard let employeeType = employeeType else {
+        guard let name = nameTextField.text, let employeeType = employeeType else {
             return
         }
         
