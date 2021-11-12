@@ -42,8 +42,6 @@ class ToDoTableViewController: UITableViewController {
         }
     }
    
-   
-    
     @IBSegueAction func editToDo(_ coder: NSCoder, sender: Any?) -> ToDoDetailTableViewController? {
         guard let cell = sender as? UITableViewCell, let indexPath =
                tableView.indexPath(for: cell) else {
@@ -63,7 +61,6 @@ class ToDoTableViewController: UITableViewController {
         return todos.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCellIdentifier", for: indexPath)
 
