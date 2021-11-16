@@ -7,8 +7,9 @@ class StoreItemListTableViewController: UITableViewController {
     @IBOutlet var filterSegmentedControl: UISegmentedControl!
     
     // add item controller property
+    var storeItemControllerInstance = StoreItemController()
     
-    var items = [String]()
+    var items = [StoreItem]()
     
     let queryOptions = ["movie", "music", "software", "ebook"]
     
@@ -22,16 +23,34 @@ class StoreItemListTableViewController: UITableViewController {
         self.items = []
         self.tableView.reloadData()
         
-        let searchTerm = searchBar.text ?? ""
+        guard let searchTerm = searchBar.text else {
+            return
+        }
+        
         let mediaType = queryOptions[filterSegmentedControl.selectedSegmentIndex]
         
         if !searchTerm.isEmpty {
-            
             // set up query dictionary
-            
+            let query = [
+                "term": searchTerm,
+                "media": mediaType,
+                "limit": "10",
+                "lang": "en_us"
+            ]
             // use the item controller to fetch items
             // if successful, use the main queue to set self.items and reload the table view
             // otherwise, print an error to the console
+            storeItemControllerInstance.fetchItems(matching: query) { result in
+                switch result {
+                case .success(let info):
+                    DispatchQueue.main.async {
+                        self.items = info
+                        self.tableView.reloadData()
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+            }
         }
     }
     
@@ -40,14 +59,25 @@ class StoreItemListTableViewController: UITableViewController {
         let item = items[indexPath.row]
         
         // set cell.titleLabel to the item's name
-        
+        cell.titleLabel.text = item.track
         // set cell.detailLabel to the item's artist
-        
+        cell.detailLabel.text = item.artistName
         // set cell.itemImageView to the system image "photo"
-        
+        cell.itemImageView.image = UIImage(systemName: "photo")
         // initialize a network task to fetch the item's artwork
-        
+        let task = URLSession.shared.dataTask(with: item.url) { data, _, error in
+            if let error = error {
+                print(error)
+            }
+            if let data = data {
+                let newImage = UIImage(data: data)
+                DispatchQueue.main.async {
+                    cell.itemImageView.image = newImage
+                }
+            }
+        }
         // if successful, use the main queue capture the cell, to initialize a UIImage, and set the cell's image view's image to the
+        task.resume()
     }
     
     @IBAction func filterOptionUpdated(_ sender: UISegmentedControl) {
