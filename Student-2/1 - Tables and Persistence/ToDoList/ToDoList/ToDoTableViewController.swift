@@ -47,7 +47,8 @@ class ToDoTableViewController: UITableViewController {
                tableView.indexPath(for: cell) else {
                 return nil
             }
-            tableView.deselectRow(at: indexPath, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
         
             let detailController = ToDoDetailTableViewController(coder:
                coder)
