@@ -41,6 +41,7 @@ class ToDoDetailTableViewController: UITableViewController {
             } else {
               dueDatePickerView.date = Date().addingTimeInterval(24*60*60)
             }
+        
             updateDueDateLabel(date: dueDatePickerView.date)
             updateSaveButtonState()
     }
@@ -63,6 +64,8 @@ class ToDoDetailTableViewController: UITableViewController {
                 updateDueDateLabel(date: dueDatePickerView.date)
                 tableView.reloadData()
             }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
         }
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

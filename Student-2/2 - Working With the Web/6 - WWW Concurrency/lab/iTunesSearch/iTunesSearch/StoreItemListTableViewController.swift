@@ -107,7 +107,7 @@ class StoreItemListTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
+ 
 extension StoreItemListTableViewController: UISearchBarDelegate {
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
