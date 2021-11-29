@@ -57,7 +57,7 @@
                                 <connections>
                                     <outlet property="isCompleteButton" destination="aNf-CC-iGd" id="aBK-9W-BQD"/>
                                     <outlet property="titleLabel" destination="DmO-6J-Ex4" id="bm2-HY-dWl"/>
-                                    <segue destination="0Au-Mo-Z2l" kind="presentation" id="hzI-0d-Ia7"/>
+                                    <segue destination="0Au-Mo-Z2l" kind="presentation" identifier="" id="hzI-0d-Ia7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -222,12 +222,12 @@
                     <navigationItem key="navigationItem" title="New ToDo" largeTitleDisplayMode="never" id="7d0-cI-1UX">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Du6-9P-WJX">
                             <connections>
-                                <segue destination="Ixq-XA-Xnh" kind="unwind" unwindAction="unwindToToDoListWithSegue:" id="bPP-SZ-JhH"/>
+                                <segue destination="Ixq-XA-Xnh" kind="unwind" unwindAction="unwindToToDoListWithSegue:" id="BPL-1r-Tq8"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="vEg-cn-EGq">
                             <connections>
-                                <segue destination="Ixq-XA-Xnh" kind="unwind" identifier="saveUnwind" unwindAction="unwindToToDoListWithSegue:" id="BPM-84-mVt"/>
+                                <segue destination="Ixq-XA-Xnh" kind="unwind" identifier="saveUnwind" unwindAction="unwindToToDoListWithSegue:" id="usn-Aq-eLe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
