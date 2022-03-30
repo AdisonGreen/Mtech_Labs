@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2iQ-ru-FFe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--People-->
         <scene sceneID="D16-nn-dZB">
             <objects>
                 <navigationController id="bbL-70-k2x" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hk7-DR-syN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <tabBarItem key="tabBarItem" title="People" image="person.2.fill" catalog="system" id="xQo-r3-KPd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hk7-DR-syN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -22,14 +24,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCn-w7-IeB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1230" y="69"/>
+            <point key="canvasLocation" x="1229" y="58"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Habits-->
         <scene sceneID="rVC-eI-XO4">
             <objects>
                 <navigationController id="Iyh-Tv-fO8" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qv0-Z2-fxm">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <tabBarItem key="tabBarItem" title="Habits" image="star.fill" catalog="system" id="oaC-xL-F8d"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qv0-Z2-fxm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -38,14 +41,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50R-39-byZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="564" y="69"/>
+            <point key="canvasLocation" x="564" y="58"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Log Habit-->
         <scene sceneID="cZp-nz-yvL">
             <objects>
                 <navigationController id="gE3-dM-6W5" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jh7-r1-RB0">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <tabBarItem key="tabBarItem" title="Log Habit" image="checkmark.square.fill" catalog="system" id="wAr-Au-PBg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jh7-r1-RB0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -54,14 +58,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2f-Fg-JVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="69"/>
+            <point key="canvasLocation" x="1896" y="58"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="iTO-Gq-Kam">
             <objects>
                 <navigationController id="4cP-4i-Ke4" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Em-nV-0ZG">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="CpN-gR-MQi"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="4Em-nV-0ZG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -70,12 +75,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVj-fq-Thb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-106" y="69"/>
+            <point key="canvasLocation" x="-107" y="58"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Home-->
         <scene sceneID="zuL-DK-VYZ">
             <objects>
-                <collectionViewController id="t8f-CF-qB1" sceneMemberID="viewController">
+                <collectionViewController id="t8f-CF-qB1" customClass="HomeCollectionViewController" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="5Db-u9-oyk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,16 +106,16 @@
                             <outlet property="delegate" destination="t8f-CF-qB1" id="Rlx-Ts-NHE"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="nwV-js-kfv"/>
+                    <navigationItem key="navigationItem" title="Home" id="nwV-js-kfv"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2t3-9Y-r3n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-106" y="773"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Habits-->
         <scene sceneID="QKq-4c-xz1">
             <objects>
-                <collectionViewController id="TMJ-n9-k6B" sceneMemberID="viewController">
+                <collectionViewController id="TMJ-n9-k6B" customClass="HabitCollectionViewController" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="7RF-5K-6PV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,6 +134,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <segue destination="c6I-cX-wd1" kind="show" id="PT2-sM-JZ4"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -136,16 +144,48 @@
                             <outlet property="delegate" destination="TMJ-n9-k6B" id="Snh-i6-P8E"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="D1y-aS-oEM"/>
+                    <navigationItem key="navigationItem" title="Habits" id="D1y-aS-oEM"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLV-He-DOu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="564" y="773"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Habit Detail View Controller-->
+        <scene sceneID="Mpf-OD-o5T">
+            <objects>
+                <viewController id="c6I-cX-wd1" customClass="HabitDetailViewController" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dAq-ya-TIc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zYz-QC-R9U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="UgX-Oj-tfY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uk7-dz-Yfe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="1446"/>
+        </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="O4x-vT-mMH">
+            <objects>
+                <viewController id="rDu-kU-Rum" customClass="UserDetailViewController" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Fh-AT-7lV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="i1r-an-zLD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="e3D-5U-kep"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z1m-gl-Kse" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="1446"/>
+        </scene>
+        <!--People-->
         <scene sceneID="TOo-AO-XVd">
             <objects>
-                <collectionViewController id="bcV-hc-8iw" sceneMemberID="viewController">
+                <collectionViewController id="bcV-hc-8iw" customClass="UserCollectionViewController" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="W7y-DQ-ekc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,6 +204,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <segue destination="rDu-kU-Rum" kind="show" id="ouH-ws-y7e"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -171,16 +214,16 @@
                             <outlet property="delegate" destination="bcV-hc-8iw" id="TfE-f5-PxA"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="tVi-ML-oOm"/>
+                    <navigationItem key="navigationItem" title="People" id="tVi-ML-oOm"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPL-oB-hwK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1229" y="773"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Log Habit-->
         <scene sceneID="aFw-uK-Vt5">
             <objects>
-                <collectionViewController id="1WW-V6-SO3" sceneMemberID="viewController">
+                <collectionViewController id="1WW-V6-SO3" customClass="LogHabitCollectionViewController" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="g0e-Jy-Eny">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,14 +249,39 @@
                             <outlet property="delegate" destination="1WW-V6-SO3" id="TGh-u2-5j5"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="uMf-MQ-P8C"/>
+                    <navigationItem key="navigationItem" title="Log Habit" id="uMf-MQ-P8C"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLI-hI-L7l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1897" y="773"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KF5-2h-F7R">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2iQ-ru-FFe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CIt-Cs-H5L">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4cP-4i-Ke4" kind="relationship" relationship="viewControllers" id="DIg-2J-i4W"/>
+                        <segue destination="Iyh-Tv-fO8" kind="relationship" relationship="viewControllers" id="AHH-sF-UoT"/>
+                        <segue destination="bbL-70-k2x" kind="relationship" relationship="viewControllers" id="TBI-GB-aYX"/>
+                        <segue destination="gE3-dM-6W5" kind="relationship" relationship="viewControllers" id="C3L-Gi-zWd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ub4-xC-qsb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="-759"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
