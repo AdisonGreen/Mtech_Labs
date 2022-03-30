@@ -10,6 +10,19 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
     let storeItemController = StoreItemController()
     
     var items = [StoreItem]()
+    
+    var tableViewDataSource: UITableViewDiffableDataSource<String, StoreItem>!
+    
+    var collectionViewDataSource: UICollectionViewDiffableDataSource<String, StoreItem>!
+    
+    var itemsSnapshot: NSDiffableDataSourceSnapshot<String, StoreItem> {
+        var snapshot = NSDiffableDataSourceSnapshot<String, StoreItem>()
+        
+        snapshot.appendSections(["Results"])
+        snapshot.appendItems(items)
+        
+        return snapshot
+    }
 
     let queryOptions = ["movie", "music", "software", "ebook"]
     
@@ -22,6 +35,24 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
         searchController.automaticallyShowsSearchResultsController = true
         searchController.searchBar.showsScopeBar = true
         searchController.searchBar.scopeButtonTitles = ["Movies", "Music", "Apps", "Books"]
+        
+        let itemSize =
+           NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3),
+           heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize =
+           NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+           heightDimension: .fractionalWidth(0.5))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize:
+           groupSize, subitem: item, count: 3)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8,
+           bottom: 8, trailing: 8)
+        section.interGroupSpacing = 8
+        
+//        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(section: section)
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -32,6 +63,28 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
     @IBAction func switchContainerView(_ sender: UISegmentedControl) {
         tableContainerView.isHidden.toggle()
         collectionContainerView.isHidden.toggle()
+    }
+    
+    func configureTableViewDataSource(_ tableView: UITableView) { tableViewDataSource = UITableViewDiffableDataSource<String, StoreItem>(tableView: tableView, cellProvider:
+           { (tableView, indexPath, item) -> UITableViewCell? in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Item", for: indexPath) as! ItemTableViewCell
+    
+        cell.configure(for: item, storeItemController: self.storeItemController)
+        
+            return cell
+        })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue,
+       sender: Any?) {
+        if let tableViewController = segue.destination as?
+           StoreItemListTableViewController {
+            configureTableViewDataSource(tableViewController.tableView)
+        }
+        
+        if let collectionViewController = segue.destination as? StoreItemCollectionViewController {
+            configureCollectionViewDataSource(collectionViewController.collectionView)
+        }
     }
     
     @objc func fetchMatchingItems() {
@@ -64,6 +117,8 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
                         self.items = items
                         
                         // apply data source changes
+                        self.tableViewDataSource.apply(self.itemsSnapshot, animatingDifferences: true, completion: nil)
+                        self.collectionViewDataSource.apply(self.itemsSnapshot, animatingDifferences: true)
                     }
                 case .failure(let error):
                     // otherwise, print an error to the console
@@ -72,7 +127,22 @@ class StoreItemContainerViewController: UIViewController, UISearchResultsUpdatin
             }
         } else {
             // apply data source changes
+            self.tableViewDataSource.apply(self.itemsSnapshot, animatingDifferences: true, completion: nil)
+            self.collectionViewDataSource.apply(self.itemsSnapshot, animatingDifferences: true)
         }
+    }
+    
+    
+    func configureCollectionViewDataSource(_ collectionView: UICollectionView) {
+        collectionViewDataSource = UICollectionViewDiffableDataSource<String, StoreItem>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, item) ->
+           UICollectionViewCell? in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Item", for: indexPath) as! ItemCollectionViewCell
+            
+            cell.configure(for: item, storeItemController: self.storeItemController)
+
+            return cell
+        })
+        
     }
     
 }

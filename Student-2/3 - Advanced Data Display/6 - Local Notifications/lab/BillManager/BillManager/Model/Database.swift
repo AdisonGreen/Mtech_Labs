@@ -85,7 +85,12 @@ class Database {
         return _billsLookup[id]
     }
     
-}
+    func getBill(forNotificationID: String) -> Bill? {
+        _billsLookup.values.first { bill in
+            return bill.notificationID == forNotificationID
+        }
+    }
+ }
 
 extension Bill: Comparable {
     static func < (lhs: Bill, rhs: Bill) -> Bool {
